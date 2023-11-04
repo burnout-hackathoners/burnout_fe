@@ -1,7 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from "react-query";
-import App from "./App.tsx";
+import App from './App.tsx';
 import "./index.css";
 
 const queryClient = new QueryClient();
@@ -13,12 +13,6 @@ const queryClient = new QueryClient();
 //     </QueryClientProvider>
 //   </React.StrictMode>
 // );
-
-// ReactDOM.createRoot(document.getElementById('root')!).render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-// )
 
 // export function renderIfIdExists(
 //   elementId: string,
@@ -73,6 +67,11 @@ async function renderIntegrations() {
             <h4 class="styles__CardTitle-sc-a0ec6c34-6 HTOsJ">${title}</h4>
             <p class="styles__CardDescription-sc-a0ec6c34-7 lavQkG">${description}</p>
             <span class="styles__CardReadMore-sc-a0ec6c34-8 echzOB">Read more</span>
+            <div class="Checkmark__StyledCheckmark-sc-d64cb1e2-0 iXQNCZ styles__StyledCheckmark-sc-a0ec6c34-9 jVpJBG">
+                <span class="Checkmark__StyledCheckmarkIcon-sc-d64cb1e2-1 hPsHRA"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" class="svg-inline--fa fa-check Icon__StyledFontAwesomeIcon-sc-480c5e3d-0 pCUAp" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="--fa-primary-color: #2A2A2A; --fa-secondary-color: #E3E3E3; --fa-secondary-opacity: 1;"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></span>
+                
+                <span class="Checkmark__StyledCheckmarkText-sc-d64cb1e2-2 lhdddf">Connected</span>
+            </div>
           </div>
         </div>
       </a>`;
