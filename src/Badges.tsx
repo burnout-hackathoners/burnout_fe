@@ -17,8 +17,8 @@ function UserBadgesWidget() {
         <>
             <section className='CollapsibleSurface__CollapsibleSection-sc-78c0a714-5 fwjoFK'>
                 <div className='badges-wrapper CollapsibleSurface__IconWrapper-sc-78c0a714-3 idroUI'>
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((curriculum, index) => (
-                        <div key={index} className='FlexContainer-sc-383a0367-0 Avatar__CompletionStatusAlignmentWrapper-sc-3c5e4c94-5 heWXvb dnhoxd'>
+                    {achievements.data.map((curriculum) => (
+                        <div key={curriculum.id} className='FlexContainer-sc-383a0367-0 Avatar__CompletionStatusAlignmentWrapper-sc-3c5e4c94-5 heWXvb dnhoxd'>
                             <RadialBarChart
                                 width={circleSize}
                                 height={circleSize}
