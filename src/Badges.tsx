@@ -1,4 +1,5 @@
-import { RadialBarChart, PolarAngleAxis, RadialBar } from "recharts";
+import { RadialBarChart, PolarAngleAxis, RadialBar } from 'recharts';
+import useLoadCurriculums, { Achievement } from './hooks/useLoadCurriculums';
 
 const data = [
     { name: 'L1', value: 14 }
@@ -6,13 +7,21 @@ const data = [
 
 const circleSize = 96;
 
+
 function UserBadgesWidget() {
+    const userID = '205964';
+
+    const { data: achievements, isFetching } = useLoadCurriculums(userID);
+
+    if (isFetching || !achievements) return <div>Loading...</div>
+
+
   return (
     <>
         <section className='CollapsibleSurface__CollapsibleSection-sc-78c0a714-5 fwjoFK'>
             <div className='badges-wrapper CollapsibleSurface__IconWrapper-sc-78c0a714-3 idroUI'>
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
-                    <div key={index} className='badge__item FlexContainer-sc-383a0367-0 Avatar__CompletionStatusAlignmentWrapper-sc-3c5e4c94-5 heWXvb dnhoxd'>
+                {achievements.data.map((curriculum: Achievement) => (
+                    <div key={curriculum.id} className='badge__item FlexContainer-sc-383a0367-0 Avatar__CompletionStatusAlignmentWrapper-sc-3c5e4c94-5 heWXvb dnhoxd'>
                         <RadialBarChart
                             width={circleSize}
                             height={circleSize}

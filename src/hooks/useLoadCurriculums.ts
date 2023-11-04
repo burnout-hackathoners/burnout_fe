@@ -1,14 +1,20 @@
 import { useQuery } from "react-query";
 import CurriculumsService from '../services/curriculums.service';
 
-function useLoadCurriculums(userId: string, organizationId: string) {
-    return useQuery(
-        ["curriculums", userId, organizationId],
-        () => CurriculumsService.getCurriculums(userId, organizationId),
+
+export type Achievement = {
+    id: number;
+    title: string;
+}
+
+function useLoadCurriculums(userId: string) {
+    return useQuery<{ data: Achievement[]}>(
+        ["curriculums", userId],
+        () => CurriculumsService.getCurriculums(userId) as Promise<{ data: Achievement[]}>,
         {
             retry: false,
             refetchOnWindowFocus: false,
-            enabled: !!userId && !!organizationId,
+            enabled: !!userId,
         }
     );
 }

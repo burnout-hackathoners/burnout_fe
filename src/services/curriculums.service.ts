@@ -1,8 +1,8 @@
 import { apiClient, endpoints } from './api';
 
 const CurriculumsService = {
-    getCurriculums(userId: string, organizationId: string) {
-        return apiClient.get(endpoints.curriculums.get(userId, organizationId));
+    getCurriculums(userId: string) {
+        return apiClient.get(endpoints.curriculums.get(), { params: { user_id: userId } },);
     }
 }
 
