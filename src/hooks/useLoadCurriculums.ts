@@ -1,8 +1,7 @@
 import { useQuery } from "react-query";
 import CurriculumsService from '../services/curriculums.service';
 
-
-export type Achievement = {
+type Achievement = {
     id: number;
     title: string;
 }
