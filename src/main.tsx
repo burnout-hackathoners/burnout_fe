@@ -1,35 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { ReactNode } from "react";
+import ReactDOM from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "react-query";
-import App from './App.tsx';
 import "./index.css";
+import UserBadgesWidget from "./Badges.tsx";
 
 const queryClient = new QueryClient();
 
-// ReactDOM.createRoot(document.getElementById("root")!).render(
-//   <React.StrictMode>
-//     <QueryClientProvider client={queryClient}>
-//       <App />
-//     </QueryClientProvider>
-//   </React.StrictMode>
-// );
+export function renderIfIdExists(elementId: string, children: ReactNode) {
+  const element = document.getElementById(elementId);
 
-// export function renderIfIdExists(
-//   elementId: string,
-//   children: ReactNode
-// ) {
-//   const element = document.getElementById(elementId);
-
-//   if (element) {
-//     ReactDOM.createRoot(element as HTMLElement).render(children);
-//   }
-// }
-
-// export default function renderWidget(elementId: string, children: ReactNode) {
-//   renderIfIdExists(elementId, <Wrapper>{children}</Wrapper>);
-// }
-
-// renderWidget("burnout-integrations", <HomepageWidget />);
+  if (element) {
+    ReactDOM.createRoot(element as HTMLElement).render(children);
+  }
+}
 
 function waitForElm(selector: string) {
   return new Promise((resolve) => {
@@ -49,6 +32,41 @@ function waitForElm(selector: string) {
       subtree: true,
     });
   });
+}
+
+async function renderBadges() {
+  const re = /^\/[^/]+\/users\/[^/]+/i;
+
+  if (re.test(window.location.pathname)) {
+    await waitForElm(
+      "#user-profile > div.Profile__ProfileWrapper-sc-a2b9328-2.bvMEhB > div.Profile__ProfileRightBlockWrapper-sc-a2b9328-3.iyxvGn > section"
+    );
+
+    const groupResponsibilities = document.querySelector(
+      "#group-responsibilities"
+    );
+
+    if (groupResponsibilities) {
+      var element = document.createElement("div");
+      element.id = "group-burnout-badges";
+      element.className =
+        "Surface__StyledSurface-sc-d7491f6a-0 jSxRQq styles__StyledProfileSurface-sc-cf7cff64-3 fzCEFz";
+
+      groupResponsibilities.parentElement?.insertBefore(
+        element,
+        groupResponsibilities
+      );
+
+      renderIfIdExists(
+        "group-burnout-badges",
+        <React.StrictMode>
+          <QueryClientProvider client={queryClient}>
+            <UserBadgesWidget />
+          </QueryClientProvider>
+        </React.StrictMode>
+      );
+    }
+  }
 }
 
 async function renderIntegrations() {
@@ -134,3 +152,5 @@ async function renderIntegrations() {
 }
 
 renderIntegrations();
+
+renderBadges();
