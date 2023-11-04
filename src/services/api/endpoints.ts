@@ -1,7 +1,7 @@
 const endpoints = {
-    curriculums: {
-        get: () => `/achievements`,
-    }
-}
+  curriculums: {
+    get: () => `/achievements`,
+  },
+};
 
 export default endpoints;

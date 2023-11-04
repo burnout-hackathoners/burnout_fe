@@ -1,9 +1,9 @@
-import axios from 'axios';
+import axios from "axios";
 
-import { httpProvider } from './httpProvider.ts';
+import { httpProvider } from "./httpProvider.ts";
 
 const apiClient = axios.create({
-    baseURL: 'http://localhost:3000',
+  baseURL: "http://localhost:3000",
 });
 
 const httpClient = httpProvider(apiClient);

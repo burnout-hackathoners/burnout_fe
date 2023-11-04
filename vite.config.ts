@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -7,12 +7,13 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        widgets: 'index.html',
+        widgets: "index.html",
       },
       output: {
-        format: 'iife',
-        entryFileNames: (chunkInfo) => chunkInfo.name === 'main' ? 'main.js' : '[name].[hash].js',
+        format: "iife",
+        entryFileNames: (chunkInfo) =>
+          chunkInfo.name === "main" ? "main.js" : "[name].[hash].js",
       },
     },
   },
-})
+});
