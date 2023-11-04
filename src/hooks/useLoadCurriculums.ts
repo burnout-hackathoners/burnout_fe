@@ -4,6 +4,7 @@ import CurriculumsService from "../services/curriculums.service";
 type Achievement = {
   id: number;
   title: string;
+  completion_percentage: number;
 };
 
 function useLoadCurriculums(userId: string) {

@@ -1,2 +1,3 @@
 export { default as Errors } from "./Errors";
 export { default as NoData } from "./NoData";
+export { default as SpinnerLoading } from "./SpinnerLoading";

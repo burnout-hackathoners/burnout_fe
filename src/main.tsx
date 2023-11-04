@@ -1,9 +1,9 @@
 import React, { ReactNode } from "react";
 import ReactDOM from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "react-query";
-import "./index.css";
 import UserBadgesWidget from "./Badges.tsx";
 import { integrationsData } from "./integrationsData.ts";
+import "./index.css";
 
 const queryClient = new QueryClient();
 
