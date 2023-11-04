@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
 import ReactDOM from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "react-query";
-import "./index.css";
-import UserBadgesWidget from "./Badges.tsx";
+import './index.css';
+import UserBadgesWidget from './Badges.tsx';
 
 const queryClient = new QueryClient();
 
@@ -20,7 +20,7 @@ function waitForElm(selector: string) {
       return resolve(document.querySelector(selector));
     }
 
-    const observer = new MutationObserver((mutations) => {
+    const observer = new MutationObserver(() => {
       if (document.querySelector(selector)) {
         observer.disconnect();
         resolve(document.querySelector(selector));
@@ -47,7 +47,7 @@ async function renderBadges() {
     );
 
     if (groupResponsibilities) {
-      var element = document.createElement("div");
+      const element = document.createElement("div");
       element.id = "group-burnout-badges";
       element.className =
         "Surface__StyledSurface-sc-d7491f6a-0 jSxRQq styles__StyledProfileSurface-sc-cf7cff64-3 fzCEFz";
@@ -100,7 +100,7 @@ async function renderIntegrations() {
     description: string,
     image: string
   ) {
-    var element = document.createElement("div");
+    const element = document.createElement("div");
     element.className = "Column__StyledColumn-sc-fb7e041e-0 dzyfRJ";
     element.innerHTML = renderIntegration(title, description, image);
 

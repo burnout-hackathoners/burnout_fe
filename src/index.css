@@ -61,6 +61,22 @@ button:focus-visible {
     grid-template-columns: repeat(8,100px);
 }
 
+/* Helpers */
+
+.flex {
+    display: flex;
+}
+
+.content-center {
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-msg {
+    color: #ff4d4d;
+}
+
 @media (prefers-color-scheme: light) {
     :root {
         color: #213547;
