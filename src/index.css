@@ -55,7 +55,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.badges-wrapper {
+.badges-wrapper.badges-wrapper {
   display: grid;
   grid-gap: 0.3em;
   grid-template-columns: repeat(8, 100px);

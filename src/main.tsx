@@ -1,3 +1,5 @@
+import "react-tooltip/dist/react-tooltip.css";
+
 import React, { ReactNode } from "react";
 import ReactDOM from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "react-query";
