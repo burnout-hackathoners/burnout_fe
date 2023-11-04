@@ -7,6 +7,7 @@ function useLoadCurriculums(userId: string, organizationId: string) {
         () => CurriculumsService.getCurriculums(userId, organizationId),
         {
             retry: false,
+            refetchOnWindowFocus: false,
             enabled: !!userId && !!organizationId,
         }
     );
