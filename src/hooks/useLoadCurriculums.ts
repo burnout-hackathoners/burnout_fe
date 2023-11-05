@@ -5,6 +5,7 @@ type Achievement = {
   id: number;
   title: string;
   completion_percentage: number;
+  badgeUrl: string;
 };
 
 function useLoadCurriculums(userId: string) {
