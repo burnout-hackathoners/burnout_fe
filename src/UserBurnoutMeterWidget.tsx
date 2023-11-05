@@ -142,7 +142,7 @@ function UserBurnoutMeterWidget() {
   return (
     <div>
       <div className="UserProfileCard__SectionTitleWrapper-sc-795b4c62-11 jcSbWd">
-        <div className="TitleStyles__TitleUnclickableLabel-sc-8820e942-4 iDobjJ offset-bottom-sm">
+        <div className="TitleStyles__TitleUnclickableLabel-sc-8820e942-4 iDobjJ offset-bottom-xsm">
           Burnout Meter
         </div>
         <p className="SurfaceHeader__Description-sc-cc67cdfe-3 hbVhmH">

@@ -1,6 +1,6 @@
 import { PolarAngleAxis, RadialBar, RadialBarChart } from "recharts";
 
-const circleSize = 76;
+const circleSize = 96;
 
 interface Props {
   completionPercentage: number;

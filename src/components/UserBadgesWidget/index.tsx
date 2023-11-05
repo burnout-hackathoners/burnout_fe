@@ -25,8 +25,10 @@ function UserBadgesWidget() {
   return (
     <section className="CollapsibleSurface__CollapsibleSection-sc-78c0a714-5 fwjoFK">
       <div className="SurfaceHeader__Section-sc-cc67cdfe-0 kpwbfn offset-bottom-md">
-        <div className="SurfaceHeader__TitleWrapper-sc-cc67cdfe-1 gLAZLS">
-          <h2 className="SurfaceHeader__Title-sc-cc67cdfe-2 cZCOLY">Badges</h2>
+        <div className="SurfaceHeader__TitleWrapper-sc-cc67cdfe-1 gLAZLS offset-bottom-xsm">
+          <h2 className="TitleStyles__TitleUnclickableLabel-sc-8820e942-4 iDobjJ">
+            Badges
+          </h2>
           <p className="SurfaceHeader__Description-sc-cc67cdfe-3 hbVhmH">
             You can get badges after completing a curriculum.
           </p>
@@ -35,22 +37,28 @@ function UserBadgesWidget() {
 
       <div className="badges-wrapper CollapsibleSurface__IconWrapper-sc-78c0a714-3 idroUI">
         {sortedCurriculums.map((curriculum) => (
-          <a href={`/qa-team/curriculums/${curriculum.id}`} key={curriculum.id}>
-            <Tooltip
-              id={`tooltip-${curriculum.id}`}
-              place="top"
-              content={curriculum.title}
-            />
-            <div
-              data-tooltip-id={`tooltip-${curriculum.id}`}
-              className="FlexContainer-sc-383a0367-0 Avatar__CompletionStatusAlignmentWrapper-sc-3c5e4c94-5 heWXvb dnhoxd"
+          <div className="content-center offset-bottom-sm">
+            <a
+              href={`/qa-team/curriculums/${curriculum.id}`}
+              key={curriculum.id}
             >
-              <BarChart
-                completionPercentage={curriculum.completion_percentage}
+              <Tooltip
+                id={`tooltip-${curriculum.id}`}
+                place="top"
+                content={curriculum.title}
               />
-              <Avatar icon={curriculum.icon} />
-            </div>
-          </a>
+              <div
+                data-tooltip-id={`tooltip-${curriculum.id}`}
+                className="FlexContainer-sc-383a0367-0 Avatar__CompletionStatusAlignmentWrapper-sc-3c5e4c94-5 heWXvb dnhoxd"
+              >
+                <BarChart
+                  completionPercentage={curriculum.completion_percentage}
+                />
+                <Avatar icon={curriculum.icon} />
+              </div>
+            </a>
+            <p className="badge-name">Awesome</p>
+          </div>
         ))}
       </div>
     </section>

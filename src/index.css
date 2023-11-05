@@ -57,7 +57,14 @@ button:focus-visible {
 
 .badges-wrapper.badges-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min-content, 80px));
+  grid-template-columns: repeat(auto-fill, minmax(min-content, 96px));
+  gap: 1rem;
+  margin-left: -8px;
+}
+
+.badge-name {
+  font-size: 0.9em;
+  font-weight: 500;
 }
 
 /* Helpers */
@@ -66,11 +73,15 @@ button:focus-visible {
   text-align: center;
 }
 
-.offset-bottom-sm {
+.offset-bottom-xsm.offset-bottom-xsm {
+  margin-bottom: 4px;
+}
+
+.offset-bottom-sm.offset-bottom-sm {
   margin-bottom: 8px;
 }
 
-.offset-bottom-md {
+.offset-bottom-md.offset-bottom-md {
   margin-bottom: 16px;
 }
 
