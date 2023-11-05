@@ -57,8 +57,7 @@ button:focus-visible {
 
 .badges-wrapper.badges-wrapper {
   display: grid;
-  grid-gap: 0.3em;
-  grid-template-columns: repeat(8, 100px);
+  grid-template-columns: repeat(auto-fill, minmax(min-content, 10%));
 }
 
 /* Helpers */
