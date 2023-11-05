@@ -1,6 +1,6 @@
 const Errors = () => {
   return (
-    <div className="content-center">
+    <div className="content-center container">
       <svg width="128" height="128" fill="none" className="offset-bottom-sm">
         <rect width="128" height="128" fill="#FFE2E2" rx="64" />
         <path

@@ -1,9 +1,9 @@
 const NoData = () => {
   return (
-    <div className="content-center">
+    <div className="content-center container">
       <svg width="128" height="128" fill="none" className="offset-bottom-sm">
         <rect width="128" height="128" fill="#EFE7FF" rx="64" />
-        <g clip-path="url(#a)">
+        <g clipPath="url(#a)">
           <path
             fill="#F29555"
             d="M92.09 51.7c2.17-7.13 1.93-14.67 1.5-19.07a3.44 3.44 0 0 0-4.29-3c-8.5 2.2-13.55 5.88-16.39 8.82-2.92-.67-5.91-1-8.91-.99-3-.01-5.99.32-8.91.99-2.84-2.94-7.88-6.63-16.39-8.82a3.44 3.44 0 0 0-4.28 3c-.44 4.4-.68 11.94 1.5 19.08-4.31 6.45-6.37 16.42-6.37 24.04 0 6.81 11.36 22.7 34.45 22.7 23.08 0 34.45-15.89 34.45-22.7 0-7.62-2.06-17.59-6.36-24.04Z"
