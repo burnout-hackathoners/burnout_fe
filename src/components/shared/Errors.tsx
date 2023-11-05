@@ -21,7 +21,7 @@ const Errors = () => {
         />
       </svg>
       <p className="Md1">Ooops... But something went wrong.</p>
-      <p className="">Please try latter or contact support.</p>
+      <p className="">Please try later or contact support.</p>
     </div>
   );
 };
