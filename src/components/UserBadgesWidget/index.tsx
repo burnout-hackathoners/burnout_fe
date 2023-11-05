@@ -37,7 +37,7 @@ function UserBadgesWidget() {
 
       <div className="badges-wrapper CollapsibleSurface__IconWrapper-sc-78c0a714-3 idroUI">
         {sortedCurriculums.map((curriculum) => (
-          <div className="content-center offset-bottom-sm">
+          <div className="content-center">
             <a
               href={`/qa-team/curriculums/${curriculum.id}`}
               key={curriculum.id}
@@ -57,7 +57,7 @@ function UserBadgesWidget() {
                 <Avatar icon={curriculum.icon} />
               </div>
             </a>
-            <p className="badge-name">Awesome</p>
+            {/*<p className="badge-name">Awesome</p>*/}
           </div>
         ))}
       </div>
