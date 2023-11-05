@@ -67,6 +67,10 @@ button:focus-visible {
 }
 
 .offset-bottom-sm {
+  margin-bottom: 8px;
+}
+
+.offset-bottom-md {
   margin-bottom: 16px;
 }
 

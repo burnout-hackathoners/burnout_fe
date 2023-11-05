@@ -141,6 +141,14 @@ function UserBurnoutMeterWidget() {
 
   return (
     <div>
+      <div className="UserProfileCard__SectionTitleWrapper-sc-795b4c62-11 jcSbWd">
+        <div className="TitleStyles__TitleUnclickableLabel-sc-8820e942-4 iDobjJ offset-bottom-sm">
+          Burnout Meter
+        </div>
+        <p className="SurfaceHeader__Description-sc-cc67cdfe-3 hbVhmH">
+          Check your burnout meter
+        </p>
+      </div>
       <PieChart width={300} height={150}>
         <Pie
           dataKey="value"

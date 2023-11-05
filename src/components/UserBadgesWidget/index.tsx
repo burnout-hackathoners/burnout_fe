@@ -24,7 +24,7 @@ function UserBadgesWidget() {
 
   return (
     <section className="CollapsibleSurface__CollapsibleSection-sc-78c0a714-5 fwjoFK">
-      <div className="SurfaceHeader__Section-sc-cc67cdfe-0 kpwbfn offset-bottom-sm">
+      <div className="SurfaceHeader__Section-sc-cc67cdfe-0 kpwbfn offset-bottom-md">
         <div className="SurfaceHeader__TitleWrapper-sc-cc67cdfe-1 gLAZLS">
           <h2 className="SurfaceHeader__Title-sc-cc67cdfe-2 cZCOLY">Badges</h2>
           <p className="SurfaceHeader__Description-sc-cc67cdfe-3 hbVhmH">

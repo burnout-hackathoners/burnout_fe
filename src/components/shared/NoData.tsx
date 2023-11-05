@@ -1,7 +1,7 @@
 const NoData = () => {
   return (
     <div className="content-center container">
-      <svg width="128" height="128" fill="none" className="offset-bottom-sm">
+      <svg width="128" height="128" fill="none" className="offset-bottom-md">
         <rect width="128" height="128" fill="#EFE7FF" rx="64" />
         <g clipPath="url(#a)">
           <path
