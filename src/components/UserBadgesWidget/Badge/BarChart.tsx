@@ -16,7 +16,7 @@ const BarChart = ({ completionPercentage }: Props) => {
       innerRadius={circleSize / 2 - 10}
       outerRadius={circleSize / 2}
       barSize={circleSize / 20}
-      data={[{ value: `${completionPercentage}` }]}
+      data={[{ value: completionPercentage }]}
       startAngle={90}
       endAngle={360 + 90}
     >
