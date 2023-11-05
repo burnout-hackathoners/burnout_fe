@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import UserBadgesWidget from "./components/UserBadgesWidget";
 import { integrationsData } from "./integrationsData.ts";
 import "./index.css";
+import UserBurnoutMeterWidget from "./UserBurnoutMeterWidget.tsx";
 
 const queryClient = new QueryClient();
 
@@ -65,6 +66,30 @@ function renderBadges() {
             <React.StrictMode>
               <QueryClientProvider client={queryClient}>
                 <UserBadgesWidget />
+              </QueryClientProvider>
+            </React.StrictMode>,
+          );
+
+          const burnoutMeterElement = document.createElement("div");
+          burnoutMeterElement.id = "user-profile-burnout-meter";
+          // burnoutMeterElement.className =
+          //   "Surface__StyledSurface-sc-d7491f6a-0 jSxRQq styles__StyledProfileSurface-sc-cf7cff64-3 fzCEFz";
+
+          const userProfileSecondaryDetails = document.getElementById(
+            "user-profile-secondary-details",
+          );
+
+          userProfileSecondaryDetails!.parentElement?.insertBefore(
+            burnoutMeterElement,
+            userProfileSecondaryDetails,
+          );
+
+          renderIfIdExists(
+            "user-profile-burnout-meter",
+            <React.StrictMode>
+              <QueryClientProvider client={queryClient}>
+                <UserBurnoutMeterWidget />
+                {/* <hr className="UserProfileCard__StyledHR-sc-795b4c62-7 fuJPwd" /> */}
               </QueryClientProvider>
             </React.StrictMode>,
           );
