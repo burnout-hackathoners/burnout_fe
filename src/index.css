@@ -66,10 +66,6 @@ button:focus-visible {
   text-align: center;
 }
 
-.error-msg {
-  color: #ff4d4d;
-}
-
 .offset-bottom-sm {
   margin-bottom: 16px;
 }
