@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Tooltip } from "react-tooltip";
 import useLoadCurriculums from "../../hooks/useLoadCurriculums";
 import { Avatar, BarChart } from "./Badge";
@@ -32,7 +31,10 @@ function UserBadgesWidget() {
           (curriculum) => (
             <>
               {curriculum.completion_percentage > 0 && (
-                <React.Fragment key={curriculum.id}>
+                <a
+                  href={`/qa-team/curriculums/${curriculum.id}`}
+                  key={curriculum.id}
+                >
                   <Tooltip
                     id={`tooltip-${curriculum.id}`}
                     place="top"
@@ -45,12 +47,9 @@ function UserBadgesWidget() {
                     <BarChart
                       completionPercentage={curriculum.completion_percentage}
                     />
-                    <Avatar
-                      badgeUrl={curriculum.badgeUrl}
-                      completionPercentage={curriculum.completion_percentage}
-                    />
+                    <Avatar icon={curriculum.icon} />
                   </div>
-                </React.Fragment>
+                </a>
               )}
             </>
           ),
